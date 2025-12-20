@@ -1,73 +1,45 @@
-https://img.shields.io/badge/python-3.8%252B-blue
-https://img.shields.io/badge/License-MIT-yellow.svg
-https://img.shields.io/badge/code%2520style-black-000000.svg
+# PyBck
 
-PyBck è uno strumento di backup professionale da riga di comando per sistemi Windows. Progettato per essere semplice ma potente, permette di eseguire backup automatici di unità disco e cartelle utente su dischi esterni.
+![Python](https://img.shields.io/badge/python-3.8%2B-blue)
+![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Code style](https://img.shields.io/badge/code%20style-black-000000.svg)
 
-✨ Caratteristiche
-🔄 Backup multipli: Backup di unità disco (D:, E:, ecc.) e cartelle utente (Download, Desktop, Documenti)
+**PyBck** è uno strumento di backup da riga di comando per sistemi **Windows**.  
+Peermette di eseguire **backup automatici** di unità disco e cartelle utente su dischi esterni.
 
-📊 Verifica spazio: Controllo automatico dello spazio disponibile prima del backup
+---
 
-🗑️ Gestione retention: Eliminazione automatica dei backup vecchi (configurabile)
+## ✨ Caratteristiche
 
-⚡ Progress reporting: Barra di avanzamento e log dettagliato
+- 🔄 **Backup multipli**  
+  Backup di unità disco (`D:`, `E:` ecc.) e cartelle utente (`Downloads`, `Desktop`, `Documents`)
 
-🔒 Sicurezza: Verifica dei permessi amministrativi
+- 📊 **Verifica spazio**  
+  Controllo automatico dello spazio disponibile prima del backup
 
-🛡️ Gestione errori: Robusti meccanismi di recupero errori
+- 🗑️ **Gestione retention**  
+  Eliminazione automatica dei backup vecchi (configurabile)
 
-⚙️ Configurazione: File di configurazione JSON per personalizzazione avanzata
+- ⚡ **Progress reporting**  
+  Barra di avanzamento e log dettagliato
 
-📦 Installazione
-Installazione da PyPI (futura)
-bash
-pip install pybck
-Installazione da sorgente
-bash
-# Clona il repository
-git clone https://github.com/TUO_USERNAME/PyBck.git
-cd PyBck
+- 🔒 **Sicurezza**  
+  Verifica dei permessi amministrativi
 
-# Installa in modalità sviluppo
-pip install -e .
+- 🛡️ **Gestione errori**  
+  Meccanismi robusti di recupero errori
 
-# O solo le dipendenze
-pip install -r requirements.txt
-🚀 Utilizzo Rapido
-Backup base (valori predefiniti)
-bash
-# Backup di D:, E: e cartelle utente su G:\Backup_PC
-pybck run
-Backup con configurazione personalizzata
-bash
-# Specifica disco di backup diverso
-pybck run --drive H:
+- ⚙️ **Configurazione**  
+  File di configurazione JSON per personalizzazione avanzata
 
-# Modifica giorni di retention
-pybck run --retention-days 14
-
-# Escludi cartelle utente
-pybck run --no-user-folders
-
-# Backup solo unità specifiche
-pybck run --drives D: F:
-Mostra help
-bash
-# Help generale
-pybck --help
-
-# Help comando run
-pybck run --help
 ⚙️ Configurazione
-PyBck supporta configurazioni via:
 
-Argomenti CLI: Impostazioni temporanee
+PyBck supporta configurazioni tramite:
 
-File di configurazione JSON: Impostazioni permanenti
+Argomenti CLI → impostazioni temporanee
 
-Esempio di configurazione (config.json)
-json
+File JSON → impostazioni permanenti
+
 {
   "backup_drive": "G:",
   "backup_root": "Backup_PC",
@@ -78,13 +50,8 @@ json
   "verify_backup": true,
   "log_level": "INFO"
 }
-Usare un file di configurazione
-bash
-pybck run --config ./my_config.json
-📁 Struttura dei Backup
-I backup vengono creati con questa struttura:
 
-text
+📁 Struttura dei backup
 G:\Backup_PC\
 ├── Backup_C_2024-01-15_10-30-45\
 │   ├── Downloads\
@@ -92,102 +59,6 @@ G:\Backup_PC\
 │   └── Documents\
 ├── Disco_D_Backup_2024-01-15_10-30-45\
 └── Disco_E_Backup_2024-01-15_10-30-45\
-Ogni backup include un timestamp per tracciabilità.
 
-🛠️ Comandi Disponibili
-Comando	Descrizione
-pybck run	Esegue il backup
-pybck config	Gestisce la configurazione
-pybck list	Mostra backup esistenti
-pybck clean	Pulisce backup vecchi
-pybck info	Mostra informazioni sistema
-Esempi avanzati
-bash
-# Simula backup (dry-run)
-pybck run --dry-run
 
-# Backup solo cartelle utente
-pybck run --only-user-folders
 
-# Backup con compressione
-pybck run --compress
-
-# Mostra backup esistenti
-pybck list --drive G:
-
-# Pulisci backup vecchi
-pybck clean --days 30 --dry-run
-🔧 Requisiti di Sistema
-Sistema Operativo: Windows 10/11 (supporto Linux/OSX pianificato)
-
-Python: 3.8 o superiore
-
-Privilegi: Esecuzione come Amministratore per accesso completo
-
-Spazio disco: Variabile in base ai dati da backup
-
-🐛 Risoluzione Problemi
-Problemi comuni
-"Accesso negato"
-
-bash
-# Esegui come amministratore
-pybck run --as-admin
-Disco esterno non rilevato
-
-Verifica che il disco sia collegato e alimentato
-
-Controlla la lettera dell'unità in "Questo PC"
-
-Spazio insufficiente
-
-Libera spazio sul disco di destinazione
-
-Usa --min-free-space-gb per modificare la soglia
-
-Logging dettagliato
-bash
-# Abilita log verbose
-pybck run --log-level DEBUG
-
-# Salva log su file
-pybck run --log-file backup.log
-🤝 Contribuire
-Contributi sono benvenuti! Ecco come contribuire:
-
-Fork il repository
-
-Crea un branch per la tua feature (git checkout -b feature/AmazingFeature)
-
-Commit le tue modifiche (git commit -m 'Add AmazingFeature')
-
-Push sul branch (git push origin feature/AmazingFeature)
-
-Apri una Pull Request
-
-Ambiente di sviluppo
-bash
-# Clona e installa
-git clone https://github.com/TUO_USERNAME/PyBck.git
-cd PyBck
-
-# Installa dipendenze sviluppo
-pip install -e ".[dev]"
-
-# Esegui test
-pytest
-
-# Verifica stile codice
-black src/
-flake8 src/
-📄 Licenza
-Distribuito sotto licenza MIT. Vedi LICENSE per maggiori informazioni.
-
-📞 Supporto
-📖 Documentazione: github.com/TUO_USERNAME/PyBck/docs
-
-🐛 Segnalazione Bug: Issues
-
-💡 Richieste Feature: Issues
-
-💬 Discussioni: Discussions
