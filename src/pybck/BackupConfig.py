@@ -2,6 +2,8 @@ from dataclasses import dataclass, asdict
 import re
 import json
 import os
+from pybck import logger
+LOG_CLASSE = "[BackupConfig] - "
 
 @dataclass
 class BackupConfig:
@@ -12,9 +14,12 @@ class BackupConfig:
     retention_days: int # Numero di giorni per mantenere i backup            
 
     def __post_init__(self):
+        logger.debug(LOG_CLASSE + "__post_init__ - Verifica cartelle utente")
         self.validate()
 
     def validate(self):
+        logger.debug(LOG_CLASSE + "validate - Inizio validate")  
+        logger.debug(LOG_CLASSE + "validate - Oggetto cofiguraizone: %s", asdict(self))    
         patternDrive = r'^[A-Z]:$'
         patternPath = r'^[A-Z][a-zA-Z0-9]+$'
 
@@ -42,6 +47,7 @@ class BackupConfig:
         
         if self.retention_days <= 1 or self.retention_days > 6:
             raise ValueError("Retention days Deve essere maggiore di 1 e minore di 7.")
+        logger.debug(LOG_CLASSE + "validate - Fine validate")   
     
     def save(self, filepath="config.json"):
         with open(filepath, "w") as file:
@@ -49,17 +55,22 @@ class BackupConfig:
         
     @classmethod
     def load(cls, filepath="config.json"):
-        """Carica configurazione da file JSON."""
+        logger.debug(LOG_CLASSE + "load - Inizio load.")   
+        
         if not os.path.exists(filepath):
             raise FileNotFoundError(f"File di configurazione non trovato: {filepath}")
         
         with open(filepath, "r", encoding="utf-8") as file:
             data = json.load(file)
+            logger.debug(LOG_CLASSE + "load - Fine load.")   
         
         return cls(**data)
     
     @staticmethod
     def file_exists(filepath) -> bool:
+        logger.debug(LOG_CLASSE + "file_exists - Inizio file_exists.")   
         if not os.path.exists(filepath):
+            logger.debug(LOG_CLASSE + "file_exists - File non esiste.")
             return False
+        logger.debug(LOG_CLASSE + "file_exists - File esiste.")
         return True

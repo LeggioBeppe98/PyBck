@@ -6,7 +6,7 @@ import re
 # Importa la tua classe da testare
 from pybck.BackupConfig import BackupConfig
 
-# Test per la validazione della configurazione di backup
+# Test per la validazione della configurazione di backup e per i metodi di salvataggio/caricamento
 
 def test_valid_config():   
     config = BackupConfig(
