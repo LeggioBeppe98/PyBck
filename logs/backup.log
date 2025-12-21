@@ -241,3 +241,188 @@
 2025-12-20 22:06:24,979 - DEBUG - [BackupConfig] - validate - Fine validate
 2025-12-20 22:06:24,979 - DEBUG - [ValidatorBackup] - validate_sources_exist - Inizio validate_sources_exist
 2025-12-20 22:06:24,979 - DEBUG - [ValidatorBackup] - validate_sources_exist - Unità sorgente non esiste: D:
+2025-12-21 02:23:58,987 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-21 02:23:58,988 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-21 02:23:58,989 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:'], 'user_folders': ['Documents', 'Pictures'], 'retention_days': 3}
+2025-12-21 02:23:58,989 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-21 02:23:58,990 - DEBUG - [ValidatorBackup] - validate_user_folders_exist - Inizio validate_user_folders_exist
+2025-12-21 02:23:58,990 - DEBUG - [ValidatorBackup] - validate_user_folders_exist - Controllo esistenza cartella: C:\Documents
+2025-12-21 02:23:58,991 - DEBUG - [ValidatorBackup] - validate_user_folders_exist - Tutte le cartelle utente esistono
+2025-12-21 02:34:50,002 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-21 02:34:50,002 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-21 02:34:50,003 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:'], 'user_folders': ['Documents', 'Pictures'], 'retention_days': 3}
+2025-12-21 02:34:50,003 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-21 02:35:37,752 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-21 02:35:37,753 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-21 02:35:37,753 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:'], 'user_folders': ['Documents', 'Pictures'], 'retention_days': 3}
+2025-12-21 02:35:37,754 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-21 02:37:18,776 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-21 02:37:18,777 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-21 02:37:18,777 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:'], 'user_folders': ['Documents', 'Downloads'], 'retention_days': 3}
+2025-12-21 02:37:18,778 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-21 02:38:01,525 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-21 02:38:01,525 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-21 02:38:01,526 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:'], 'user_folders': ['Documents'], 'retention_days': 3}
+2025-12-21 02:38:01,527 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-21 02:38:01,529 - DEBUG - [ValidatorBackup] - is_drive_connected - Inizio is_drive_connected
+2025-12-21 02:38:01,529 - DEBUG - [ValidatorBackup] - is_drive_connected - Drive è connesso
+2025-12-21 02:38:01,533 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-21 02:38:01,533 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-21 02:38:01,534 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:'], 'user_folders': ['Documents'], 'retention_days': 3}
+2025-12-21 02:38:01,534 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-21 02:38:01,535 - DEBUG - [ValidatorBackup] - is_drive_connected - Inizio is_drive_connected
+2025-12-21 02:38:01,536 - DEBUG - [ValidatorBackup] - is_drive_connected - Drive non è connesso
+2025-12-21 02:38:01,536 - DEBUG - [ValidatorBackup] - is_drive_connected - Inizio is_drive_connected
+2025-12-21 02:38:01,537 - DEBUG - [ValidatorBackup] - is_drive_connected - Drive è connesso
+2025-12-21 02:38:01,542 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-21 02:38:01,543 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-21 02:38:01,544 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:'], 'user_folders': ['Documents'], 'retention_days': 3}
+2025-12-21 02:38:01,545 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-21 02:38:01,545 - DEBUG - [ValidatorBackup] - is_drive_connected - Inizio is_drive_connected
+2025-12-21 02:38:01,550 - DEBUG - [ValidatorBackup] - is_drive_connected - Drive non è connesso
+2025-12-21 02:38:01,562 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-21 02:38:01,563 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-21 02:38:01,563 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:'], 'user_folders': ['Documents'], 'retention_days': 3}
+2025-12-21 02:38:01,564 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-21 02:38:01,565 - DEBUG - [ValidatorBackup] - validate_sources_exist - Inizio validate_sources_exist
+2025-12-21 02:38:01,566 - DEBUG - [ValidatorBackup] - validate_sources_exist - Tutte le unità sorgente esistono
+2025-12-21 02:38:01,569 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-21 02:38:01,570 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-21 02:38:01,570 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:'], 'user_folders': ['Documents'], 'retention_days': 3}
+2025-12-21 02:38:01,571 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-21 02:38:01,571 - DEBUG - [ValidatorBackup] - validate_sources_exist - Inizio validate_sources_exist
+2025-12-21 02:38:01,571 - DEBUG - [ValidatorBackup] - validate_sources_exist - Unità sorgente non esiste: D:
+2025-12-21 02:38:01,574 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-21 02:38:01,575 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-21 02:38:01,575 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:'], 'user_folders': ['Documents', 'Downloads'], 'retention_days': 3}
+2025-12-21 02:38:01,576 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-21 02:38:01,681 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-21 02:38:01,682 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-21 02:38:01,683 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:'], 'user_folders': ['Documents', 'Pictures', 'NonExistentFolder'], 'retention_days': 3}
+2025-12-21 02:38:01,683 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-21 02:38:25,641 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-21 02:38:25,642 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-21 02:38:25,642 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:'], 'user_folders': ['Documents'], 'retention_days': 3}
+2025-12-21 02:38:25,643 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-21 02:38:25,643 - DEBUG - [ValidatorBackup] - is_drive_connected - Inizio is_drive_connected
+2025-12-21 02:38:25,643 - DEBUG - [ValidatorBackup] - is_drive_connected - Drive è connesso
+2025-12-21 02:38:25,647 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-21 02:38:25,647 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-21 02:38:25,648 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:'], 'user_folders': ['Documents'], 'retention_days': 3}
+2025-12-21 02:38:25,648 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-21 02:38:25,648 - DEBUG - [ValidatorBackup] - is_drive_connected - Inizio is_drive_connected
+2025-12-21 02:38:25,649 - DEBUG - [ValidatorBackup] - is_drive_connected - Drive non è connesso
+2025-12-21 02:38:25,649 - DEBUG - [ValidatorBackup] - is_drive_connected - Inizio is_drive_connected
+2025-12-21 02:38:25,649 - DEBUG - [ValidatorBackup] - is_drive_connected - Drive è connesso
+2025-12-21 02:38:25,652 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-21 02:38:25,652 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-21 02:38:25,652 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:'], 'user_folders': ['Documents'], 'retention_days': 3}
+2025-12-21 02:38:25,653 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-21 02:38:25,653 - DEBUG - [ValidatorBackup] - is_drive_connected - Inizio is_drive_connected
+2025-12-21 02:38:25,657 - DEBUG - [ValidatorBackup] - is_drive_connected - Drive non è connesso
+2025-12-21 02:38:25,668 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-21 02:38:25,669 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-21 02:38:25,669 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:'], 'user_folders': ['Documents'], 'retention_days': 3}
+2025-12-21 02:38:25,670 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-21 02:38:25,670 - DEBUG - [ValidatorBackup] - validate_sources_exist - Inizio validate_sources_exist
+2025-12-21 02:38:25,670 - DEBUG - [ValidatorBackup] - validate_sources_exist - Tutte le unità sorgente esistono
+2025-12-21 02:38:25,673 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-21 02:38:25,673 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-21 02:38:25,674 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:'], 'user_folders': ['Documents'], 'retention_days': 3}
+2025-12-21 02:38:25,674 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-21 02:38:25,675 - DEBUG - [ValidatorBackup] - validate_sources_exist - Inizio validate_sources_exist
+2025-12-21 02:38:25,675 - DEBUG - [ValidatorBackup] - validate_sources_exist - Unità sorgente non esiste: D:
+2025-12-21 02:38:25,678 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-21 02:38:25,679 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-21 02:38:25,679 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:'], 'user_folders': ['Documents', 'Downloads'], 'retention_days': 3}
+2025-12-21 02:38:25,680 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-21 02:38:25,781 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-21 02:38:25,782 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-21 02:38:25,782 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:'], 'user_folders': ['Documents', 'Pictures', 'NonExistentFolder'], 'retention_days': 3}
+2025-12-21 02:38:25,783 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-21 02:39:09,184 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-21 02:39:09,185 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-21 02:39:09,185 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:'], 'user_folders': ['Documents', 'Downloads'], 'retention_days': 3}
+2025-12-21 02:39:09,186 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-21 02:41:36,233 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-21 02:41:36,234 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-21 02:41:36,234 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:'], 'user_folders': ['Documents', 'Downloads'], 'retention_days': 3}
+2025-12-21 02:41:36,235 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-21 02:44:07,157 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-21 02:44:07,158 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-21 02:44:07,158 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:'], 'user_folders': ['Documents', 'Downloads'], 'retention_days': 3}
+2025-12-21 02:44:07,159 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-21 02:44:49,892 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-21 02:44:49,893 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-21 02:44:49,893 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:'], 'user_folders': ['Documents', 'Downloads'], 'retention_days': 3}
+2025-12-21 02:44:49,894 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-21 02:44:49,894 - DEBUG - [ValidatorBackup] - validate_user_folders_exist - Inizio validate_sources_exist
+2025-12-21 02:44:49,895 - DEBUG - [ValidatorBackup] - Controllo: C:\Users\leggi\Documents
+2025-12-21 02:44:49,896 - DEBUG - [ValidatorBackup] - Controllo: C:\Users\leggi\Downloads
+2025-12-21 02:44:49,896 - DEBUG - [ValidatorBackup] - Tutte le cartelle utente esistono
+2025-12-21 02:58:35,169 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-21 02:58:35,170 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-21 02:58:35,170 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:'], 'user_folders': ['Documents', 'Pictures', 'NonExistentFolder'], 'retention_days': 3}
+2025-12-21 02:58:35,171 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-21 02:58:35,171 - DEBUG - [ValidatorBackup] - validate_user_folders_exist - Inizio validate_sources_exist
+2025-12-21 02:58:35,172 - DEBUG - [ValidatorBackup] - Controllo: C:\Users\leggi\Documents
+2025-12-21 02:58:35,172 - DEBUG - Mock controllo: C:\Users\leggi\Documents
+2025-12-21 02:58:35,173 - DEBUG - Mock controllo: E:\VS_Code_WorkSpace\python\PyBck\test\test_BackupValidator.py
+2025-12-21 02:59:43,022 - DEBUG - test_validate_user_folders_not_exist -  Inizio test
+2025-12-21 02:59:43,022 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-21 02:59:43,023 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-21 02:59:43,023 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:'], 'user_folders': ['Documents', 'Pictures', 'NonExistentFolder'], 'retention_days': 3}
+2025-12-21 02:59:43,024 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-21 02:59:43,025 - DEBUG - [ValidatorBackup] - validate_user_folders_exist - Inizio validate_sources_exist
+2025-12-21 02:59:43,025 - DEBUG - [ValidatorBackup] - Controllo: C:\Users\leggi\Documents
+2025-12-21 02:59:43,026 - DEBUG - Mock controllo: C:\Users\leggi\Documents
+2025-12-21 02:59:43,027 - DEBUG - Mock controllo: E:\VS_Code_WorkSpace\python\PyBck\test\test_BackupValidator.py
+2025-12-21 03:04:58,162 - DEBUG - test_validate_user_folders_not_exist -  Inizio test
+2025-12-21 03:04:58,163 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-21 03:04:58,163 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-21 03:04:58,164 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:'], 'user_folders': ['Documents', 'Pictures', 'NonExistentFolder'], 'retention_days': 3}
+2025-12-21 03:04:58,165 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-21 03:04:58,165 - DEBUG - [ValidatorBackup] - validate_user_folders_exist - Inizio validate_sources_exist
+2025-12-21 03:04:58,166 - DEBUG - [ValidatorBackup] - Controllo: C:\Users\leggi\Documents
+2025-12-21 03:04:58,166 - DEBUG - Mock controllo percorso: C:\Users\leggi\Documents
+2025-12-21 03:04:58,166 - DEBUG - [ValidatorBackup] - Controllo: C:\Users\leggi\Pictures
+2025-12-21 03:04:58,167 - DEBUG - Mock controllo percorso: C:\Users\leggi\Pictures
+2025-12-21 03:04:58,167 - DEBUG - [ValidatorBackup] - Controllo: C:\Users\leggi\NonExistentFolder
+2025-12-21 03:04:58,167 - DEBUG - Mock controllo percorso: C:\Users\leggi\NonExistentFolder
+2025-12-21 03:04:58,168 - DEBUG - [ValidatorBackup] - Cartella utente non esiste: NonExistentFolder
+2025-12-21 03:06:36,111 - DEBUG - test_validate_user_folders_not_exist -  Inizio test
+2025-12-21 03:06:36,111 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-21 03:06:36,112 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-21 03:06:36,112 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:'], 'user_folders': ['Documents', 'Pictures', 'NonExistentFolder'], 'retention_days': 3}
+2025-12-21 03:06:36,113 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-21 03:06:36,113 - DEBUG - [ValidatorBackup] - validate_user_folders_exist - Inizio validate_sources_exist
+2025-12-21 03:06:36,114 - DEBUG - [ValidatorBackup] - Controllo: C:\Users\leggi\Documents
+2025-12-21 03:06:36,114 - DEBUG - [ValidatorBackup] - Controllo: C:\Users\leggi\Pictures
+2025-12-21 03:06:36,115 - DEBUG - [ValidatorBackup] - Controllo: C:\Users\leggi\NonExistentFolder
+2025-12-21 03:06:36,115 - DEBUG - [ValidatorBackup] - Cartella utente non esiste: NonExistentFolder
+2025-12-21 04:06:48,958 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-21 04:06:48,958 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-21 04:06:48,959 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:'], 'user_folders': ['Documents'], 'retention_days': 3}
+2025-12-21 04:06:48,960 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-21 04:15:10,989 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-21 04:15:10,990 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-21 04:15:10,990 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:'], 'user_folders': [], 'retention_days': 3}
+2025-12-21 04:16:31,600 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-21 04:16:31,600 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-21 04:16:31,601 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:'], 'user_folders': ['Documents'], 'retention_days': 3}
+2025-12-21 04:16:31,602 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-21 04:16:31,602 - DEBUG - [ValidatorBackup] - has_sufficient_space - Inizio has_sufficient_space
+2025-12-21 04:16:48,693 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-21 04:16:48,693 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-21 04:16:48,694 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:'], 'user_folders': ['Documents', 'Pictures'], 'retention_days': 3}
+2025-12-21 04:16:48,694 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-21 04:16:48,695 - DEBUG - [ValidatorBackup] - has_sufficient_space - Inizio has_sufficient_space
+2025-12-21 04:19:08,068 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-21 04:19:08,069 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-21 04:19:08,069 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:'], 'user_folders': ['Documents'], 'retention_days': 3}
+2025-12-21 04:19:08,070 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-21 04:19:08,070 - DEBUG - [ValidatorBackup] - has_sufficient_space - Inizio has_sufficient_space
+2025-12-21 04:19:08,074 - DEBUG - [ValidatorBackup] - Spazio da backuppare sul drive C: (GB): 80.0
+2025-12-21 04:19:08,075 - DEBUG - [ValidatorBackup] - Spazio da backuppare sul drive D: (GB): 130.0
+2025-12-21 04:19:08,075 - DEBUG - [ValidatorBackup] - Spazio totale da backuppare (GB): 130.0
+2025-12-21 04:19:08,076 - DEBUG - [ValidatorBackup] - has_sufficient_space - Spazio sufficiente disponibile Spazio da copiare / spazio libero 130.0 / 200.0

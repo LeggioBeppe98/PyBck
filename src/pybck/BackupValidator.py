@@ -43,18 +43,58 @@ class BackupValidator:
                 return False
         logger.debug(LOG_CLASSE + "validate_sources_exist - Tutte le unità sorgente esistono")
         return True
-    
+
     def validate_user_folders_exist(self) -> bool:
-        logger.debug(LOG_CLASSE + "validate_user_folders_exist - Inizio validate_user_folders_exist")  
+        logger.debug(LOG_CLASSE + "validate_user_folders_exist - Inizio validate_sources_exist")  
+        
         for folder in self.config.user_folders:
-            folder_found = False
-            for drive in self.config.source_drives:
-                folder_path = Path(drive + "\\" + folder)
-                if folder_path.exists():
-                    folder_found = True
-                    break
-            if not folder_found:
-                logger.debug(LOG_CLASSE + f"validate_user_folders_exist - Cartella utente non esiste: {folder}")
+            # Costruisci il percorso CORRETTO: C:\Users\<tuonome>\Downloads
+            user_profile = os.environ.get("USERPROFILE", "C:\\Users\\Default")
+            folder_path = Path(user_profile) / folder
+            
+            logger.debug(LOG_CLASSE + f"Controllo: {folder_path}")
+            
+            if not folder_path.exists():
+                logger.debug(LOG_CLASSE + f"Cartella utente non esiste: {folder}")
+                return False  # Appena una manca, ritorna False
+        
+        logger.debug(LOG_CLASSE + "Tutte le cartelle utente esistono")
+        return True  # Solo se TUTTE esistono
+    
+    def has_sufficient_space(self, approx_os_space) -> bool:
+        logger.debug(LOG_CLASSE + "has_sufficient_space - Inizio has_sufficient_space")  
+        #per ogni disco diverso da C calcolo lo spazio totale da backuppare
+        used_space = 0
+        free_space = 0 
+        MARGIN = 1.15  # <<< AGGIUNGI: il tuo margine di sicurezza originale
+        for drive in self.config.source_drives:
+            drive_path = Path(drive + "\\") 
+            if drive_path.exists() :
+                    
+                    if drive_path.drive == "C:":
+                        used_space += (psutil.disk_usage(drive_path)).used / 1024**3 - approx_os_space  # Spazio in GB
+                    else:
+                        used_space += (psutil.disk_usage(drive_path)).used / 1024**3
+                    
+                    logger.debug(LOG_CLASSE + f"Spazio da backuppare sul drive {drive} (GB): {used_space}")  
+            else :
+                logger.debug(LOG_CLASSE + f"Unità sorgente non esiste durante il calcolo spazio: {drive}")  
                 return False
-        logger.debug(LOG_CLASSE + "validate_user_folders_exist - Tutte le cartelle utente esistono")
-        return True
+                
+                
+        logger.debug(LOG_CLASSE + f"Spazio totale da backuppare (GB): {used_space}")    
+        # Controlla lo spazio disponibile sul drive di backup
+        backup_drive_path = Path(self.config.backup_drive + "\\")    
+
+        if backup_drive_path.exists():
+            free_space = (psutil.disk_usage(backup_drive_path)).free / 1024**3  # Spazio libero in GB
+        else :
+            logger.debug(LOG_CLASSE + f"Drive di backup non esiste durante il calcolo spazio: {self.config.backup_drive}")  
+            return False
+
+        if free_space >= (used_space * MARGIN):
+            logger.debug(LOG_CLASSE + f"has_sufficient_space - Spazio sufficiente disponibile Spazio da copiare / spazio libero {used_space} / {free_space}")
+            return True 
+        else:
+            logger.debug(LOG_CLASSE + f"has_sufficient_space - Spazio insufficiente disponibile Spazio da copiare / spazio libero {used_space} / {free_space}")
+            return False    

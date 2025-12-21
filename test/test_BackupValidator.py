@@ -1,11 +1,13 @@
 import pytest
-import tempfile
 import os
-import re
+
+from pathlib import Path
+import psutil
 
 # Importa la tua classe da testare
 from pybck.BackupValidator import BackupValidator
 from pybck.BackupConfig import BackupConfig
+from pybck import logger
 
 def test_drive_connected(monkeypatch):
     # Crea una configurazione di backup valida
@@ -119,3 +121,90 @@ def test_validate_sources_not_exist(monkeypatch):
     monkeypatch.setattr("pathlib.Path.exists", lambda self: mock_exists(str(self)))
     
     assert validator.validate_sources_exist() == False
+    
+def test_validate_user_folders_exist():  
+    # Crea una configurazione di backup valida
+    config = BackupConfig(  
+        backup_drive="G:",
+        backup_root="BackupPC",
+        source_drives=["C:", "D:"],
+        user_folders=["Documents", "Downloads"],
+        retention_days=3
+    )
+    validator = BackupValidator(config) 
+    
+    assert validator.validate_user_folders_exist() == True
+    
+        
+def test_validate_user_folders_not_exist(monkeypatch):
+    # Crea una configurazione di backup valida
+    config = BackupConfig(
+        backup_drive="G:",
+        backup_root="BackupPC",
+        source_drives=["C:", "D:"],
+        user_folders=["Documents", "Pictures", "NonExistentFolder"],
+        retention_days=3
+    )
+    
+    validator = BackupValidator(config)
+    
+    def mock_exists(path):
+        # Ora i path saranno tipo "C:\Users\Tuonome\Documents"
+        path_str = str(path)
+        
+        # Usa os.path.basename per estrarre solo il nome della cartella finale
+        folder_name = os.path.basename(path_str)
+        
+        if folder_name in ["Documents", "Pictures"]:
+            return True
+        return False
+    
+    monkeypatch.setattr("pathlib.Path.exists", lambda self: mock_exists(str(self)))
+    assert validator.validate_user_folders_exist() == False
+    
+def test_has_sufficient_space_true(monkeypatch):
+    config = BackupConfig(
+        backup_drive="G:",
+        backup_root="BackupPC",
+        source_drives=["C:", "D:"],
+        user_folders=["Documents"],
+        retention_days=3
+    )
+    
+    validator = BackupValidator(config)
+    
+    def mock_disk_usage(path):
+        # Normalizza: togli backslash finale
+        normalized = str(path).rstrip("\\")
+        
+        if normalized == "C:":
+            return type('obj', (object,), {
+                'used': 100 * 1024**3,
+                'free': 10 * 1024**3,
+                'total': 110 * 1024**3
+            })()
+        elif normalized == "D:":
+            return type('obj', (object,), {
+                'used': 50 * 1024**3,
+                'free': 20 * 1024**3,
+                'total': 70 * 1024**3
+            })()
+        elif normalized == "G:":
+            return type('obj', (object,), {
+                'used': 100 * 1024**3,
+                'free': 200 * 1024**3,
+                'total': 300 * 1024**3
+            })()
+        else:
+            raise ValueError(f"Path non mockato: {path}")
+    
+    def mock_path_exists(self):
+        return True
+    
+    monkeypatch.setattr(psutil, "disk_usage", mock_disk_usage)
+    monkeypatch.setattr("pathlib.Path.exists", mock_path_exists)
+    
+    approx_os_space = 20.0
+    result = validator.has_sufficient_space(approx_os_space)
+    
+    assert result == True, f"Expected True, got {result}"
