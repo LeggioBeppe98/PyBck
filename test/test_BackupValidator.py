@@ -208,3 +208,162 @@ def test_has_sufficient_space_true(monkeypatch):
     result = validator.has_sufficient_space(approx_os_space)
     
     assert result == True, f"Expected True, got {result}"
+    
+def test_has_sufficient_space_false(monkeypatch):
+    config = BackupConfig(
+        backup_drive="G:",
+        backup_root="BackupPC",
+        source_drives=["C:", "D:"],
+        user_folders=["Documents"],
+        retention_days=3
+    )
+    
+    validator = BackupValidator(config)
+    
+    def mock_disk_usage(path):
+        # Normalizza: togli backslash finale
+        normalized = str(path).rstrip("\\")
+        
+        if normalized == "C:":
+            return type('obj', (object,), {
+                'used': 100 * 1024**3,
+                'free': 10 * 1024**3,
+                'total': 110 * 1024**3
+            })()
+        elif normalized == "D:":
+            return type('obj', (object,), {
+                'used': 50 * 1024**3,
+                'free': 20 * 1024**3,
+                'total': 70 * 1024**3
+            })()
+        elif normalized == "G:":
+            return type('obj', (object,), {
+                'used': 100 * 1024**3,
+                'free': 10 * 1024**3,
+                'total': 300 * 1024**3
+            })()
+        else:
+            raise ValueError(f"Path non mockato: {path}")
+    
+    def mock_path_exists(self):
+        return True
+    
+    monkeypatch.setattr(psutil, "disk_usage", mock_disk_usage)
+    monkeypatch.setattr("pathlib.Path.exists", mock_path_exists)
+    
+    approx_os_space = 20.0
+    
+    assert validator.has_sufficient_space(approx_os_space) == False
+    
+    
+def test_can_perform_backup_all_valid(monkeypatch):
+    config = BackupConfig(
+        backup_drive="G:",
+        backup_root="BackupPC",
+        source_drives=["C:", "D:"],
+        user_folders=["Documents"],
+        retention_days=3
+    )
+    
+    validator = BackupValidator(config)
+    
+    # Mock is_drive_connected to return True
+    monkeypatch.setattr(validator, "is_drive_connected", lambda drive: True)
+    
+    #Mock validate_sources_exist to return True
+    monkeypatch.setattr(validator, "validate_sources_exist", lambda: True)
+    
+    # Mock validate_user_folders_exist to return True
+    monkeypatch.setattr(validator, "validate_user_folders_exist", lambda: True)
+    
+    # Mock has_sufficient_space to return True
+    monkeypatch.setattr(validator, "has_sufficient_space", lambda approx_os_space: True)
+    
+    approx_os_space = 20.0
+    assert validator.can_perform_backup(approx_os_space) == True
+    
+def test_can_perform_backup_drive_not_connected(monkeypatch):
+    config = BackupConfig(
+        backup_drive="G:",
+        backup_root="BackupPC",
+        source_drives=["C:", "D:"],
+        user_folders=["Documents"],
+        retention_days=3
+    )
+    
+    validator = BackupValidator(config)
+
+    # Mock is_drive_connected to return False
+    monkeypatch.setattr(validator, "is_drive_connected", lambda drive: False)
+    
+    approx_os_space = 20.0 
+    assert validator.can_perform_backup(approx_os_space) == False
+
+def test_can_perform_backup_sources_not_exist(monkeypatch):  
+    config = BackupConfig(
+        backup_drive="G:",
+        backup_root="BackupPC",
+        source_drives=["C:", "D:"],
+        user_folders=["Documents"],
+        retention_days=3
+    )
+    
+    validator = BackupValidator(config)
+    
+    # Mock is_drive_connected to return True
+    monkeypatch.setattr(validator, "is_drive_connected", lambda drive: True)
+
+    #Mock validate_sources_exist to return True
+    monkeypatch.setattr(validator, "validate_sources_exist", lambda: False)
+    
+    approx_os_space = 20.0 
+    assert validator.can_perform_backup(approx_os_space) == False
+    
+def test_can_perform_backup_user_folders_not_exist(monkeypatch):  
+    config = BackupConfig(
+        backup_drive="G:",
+        backup_root="BackupPC",
+        source_drives=["C:", "D:"],
+        user_folders=["Documents"],
+        retention_days=3
+    )
+    
+    validator = BackupValidator(config)
+
+    # Mock is_drive_connected to return True
+    monkeypatch.setattr(validator, "is_drive_connected", lambda drive: True)
+    
+    #Mock validate_sources_exist to return True
+    monkeypatch.setattr(validator, "validate_sources_exist", lambda: True)
+    
+    # Mock validate_user_folders_exist to return False
+    monkeypatch.setattr(validator, "validate_user_folders_exist", lambda: False)
+    
+    approx_os_space = 20.0 
+    assert validator.can_perform_backup(approx_os_space) == False
+    
+def test_can_perform_backup_insufficient_space(monkeypatch):  
+    config = BackupConfig(
+        backup_drive="G:",
+        backup_root="BackupPC",
+        source_drives=["C:", "D:"],
+        user_folders=["Documents"],
+        retention_days=3
+    )
+    
+    validator = BackupValidator(config)
+
+    # Mock is_drive_connected to return True
+    monkeypatch.setattr(validator, "is_drive_connected", lambda drive: True)
+    
+    #Mock validate_sources_exist to return True
+    monkeypatch.setattr(validator, "validate_sources_exist", lambda: True)
+    
+    # Mock validate_user_folders_exist to return True
+    monkeypatch.setattr(validator, "validate_user_folders_exist", lambda: True)
+    
+    # Mock has_sufficient_space to return False
+    monkeypatch.setattr(validator, "has_sufficient_space", lambda approx_os_space: False)
+    
+    approx_os_space = 20.0 
+    assert validator.can_perform_backup(approx_os_space) == False
