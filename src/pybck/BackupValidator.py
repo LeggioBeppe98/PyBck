@@ -10,7 +10,7 @@ from typing import List
 
 from pybck.BackupConfig import BackupConfig
 from pybck import logger
-LOG_CLASSE = "[ValidatorBackup] - "
+LOG_CLASSE = "[BackupValidator] - "
 
 
 class BackupValidator:
@@ -115,8 +115,8 @@ class BackupValidator:
         for check_func, check_args, error_msg in checks:
             if not check_func(*check_args):
                 logger.error(f"{LOG_CLASSE} {error_msg}")
-                self._last_error = error_msg  # Memorizza l'errore per eventuale consultazione
+                self.error = error_msg  # Memorizza l'errore per eventuale consultazione
                 return False
         
-        logger.info(f"{LOG_CLASSE}✅ Tutti i controlli superati")
+        logger.info(f"{LOG_CLASSE} Tutti i controlli superati")
         return True
