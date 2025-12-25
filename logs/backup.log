@@ -559,3 +559,12 @@
 2025-12-24 18:28:18,379 - DEBUG - [BackupConfig] - validate - Fine validate
 2025-12-24 18:28:18,379 - DEBUG - [ValidatorBackup] - can_perform_backup - Inizio can_perform_backup
 2025-12-24 18:28:18,380 - ERROR - [ValidatorBackup] -  Spazio insufficiente sul drive di backup
+2025-12-25 20:38:22,985 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-25 20:38:22,985 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-25 20:38:22,986 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:'], 'user_folders': ['Documents', 'Pictures'], 'retention_days': 3}
+2025-12-25 20:38:22,987 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-25 20:38:22,988 - DEBUG - [BackupBuilder] - execute_backup - Inizio execute_backup
+2025-12-25 20:38:22,988 - DEBUG - [BackupBuilder] - execute_backup - Copia drive: C:
+2025-12-25 20:38:22,989 - DEBUG - [BackupBuilder] - execute_backup - Copia drive: D:
+2025-12-25 20:38:22,989 - INFO - [BackupBuilder] - Backup eseguito con successo.
+2025-12-25 20:38:22,990 - DEBUG - [BackupBuilder] - execute_backup - Fine execute_backup

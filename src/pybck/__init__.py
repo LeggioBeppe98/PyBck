@@ -5,6 +5,8 @@ import logging
 import os
 from logging.handlers import RotatingFileHandler
 
+LOG_FILE_PATH = "logs/backup.log"
+
 # Creo la cartella dei log se non esiste
 os.makedirs("logs", exist_ok=True)
 
@@ -17,7 +19,7 @@ formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
 
 # Handler per il file con rotazione
 file_handler = RotatingFileHandler(
-    "logs/backup.log", maxBytes=5*1024*1024, backupCount=1
+    LOG_FILE_PATH, maxBytes=5*1024*1024, backupCount=1
 )
 file_handler.setFormatter(formatter)
 

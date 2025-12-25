@@ -7,7 +7,6 @@ import psutil
 # Importa la tua classe da testare
 from pybck.BackupValidator import BackupValidator
 from pybck.BackupConfig import BackupConfig
-from pybck import logger
 
 def test_drive_connected(monkeypatch):
     # Crea una configurazione di backup valida
