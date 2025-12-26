@@ -8,6 +8,7 @@ import psutil
 from pybck.BackupValidator import BackupValidator
 from pybck.BackupConfig import BackupConfig
 
+
 def test_drive_connected(monkeypatch):
     # Crea una configurazione di backup valida
     config = BackupConfig(
