@@ -664,3 +664,179 @@
 2025-12-26 16:35:43,230 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['D:'], 'user_folders': ['Documents', 'Pictures'], 'retention_days': 3}
 2025-12-26 16:35:43,231 - DEBUG - [BackupConfig] - validate - Fine validate
 2025-12-26 16:35:43,233 - DEBUG - [BackupBuilder] - _copy_drive - Inizio copia drive D: in G:\BackupPC\.tmp_backup_2025-12-26_16-35-43\Disco_D_Backup_2025-12-26_16-35-43
+2025-12-26 16:40:48,878 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-26 16:40:48,879 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-26 16:40:48,879 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:'], 'user_folders': ['Documents', 'Pictures'], 'retention_days': 3}
+2025-12-26 16:40:48,880 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-26 16:40:48,882 - DEBUG - [BackupBuilder] - _create_temp_backup_folder - Creazione cartella temporanea: G:\BackupPC\.tmp_backup_2025-12-26_16-40-48
+2025-12-26 16:47:19,477 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-26 16:47:19,477 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-26 16:47:19,478 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:'], 'user_folders': ['Documents', 'Pictures'], 'retention_days': 3}
+2025-12-26 16:47:19,478 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-26 16:47:19,479 - DEBUG - [BackupBuilder] - _create_temp_backup_folder - Creazione cartella temporanea: G:\BackupPC\.tmp_backup_2025-12-26_16-47-19
+2025-12-26 16:47:19,674 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-26 16:47:19,674 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-26 16:47:19,674 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:'], 'user_folders': ['Documents', 'Pictures'], 'retention_days': 3}
+2025-12-26 16:47:19,674 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-26 16:47:19,677 - DEBUG - [BackupBuilder] - _create_folder_drive - Creazione cartella per drive: G:\BackupPC\.tmp_backup_2025-12-26_16-47-19\Disco_D_Backup_2025-12-26_16-47-19
+2025-12-26 16:47:19,680 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-26 16:47:19,680 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-26 16:47:19,680 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['D:'], 'user_folders': ['Documents', 'Pictures'], 'retention_days': 3}
+2025-12-26 16:47:19,680 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-26 16:47:19,682 - DEBUG - [BackupBuilder] - _finalize_backup - Rinomina cartella temporanea in definitiva: G:\BackupPC\2025-12-26_16-47-19
+2025-12-26 16:47:19,685 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-26 16:47:19,685 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-26 16:47:19,685 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['D:'], 'user_folders': ['Documents', 'Pictures'], 'retention_days': 3}
+2025-12-26 16:47:19,685 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-26 16:47:19,686 - DEBUG - [BackupBuilder] - _copy_drive - Inizio copia drive D: in G:\BackupPC\.tmp_backup_2025-12-26_16-47-19\Disco_D_Backup_2025-12-26_16-47-19
+2025-12-26 16:47:19,687 - DEBUG - [BackupBuilder] - _copy_drive - Fine copia drive D: in G:\BackupPC\.tmp_backup_2025-12-26_16-47-19\Disco_D_Backup_2025-12-26_16-47-19
+2025-12-26 16:47:19,749 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-26 16:47:19,750 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-26 16:47:19,750 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['D:'], 'user_folders': ['Documents', 'Pictures'], 'retention_days': 3}
+2025-12-26 16:47:19,750 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-26 16:47:19,752 - DEBUG - [BackupBuilder] - _copy_drive - Inizio copia drive D: in G:\BackupPC\.tmp_backup_2025-12-26_16-47-19\Disco_D_Backup_2025-12-26_16-47-19
+2025-12-26 16:47:19,752 - WARNING - Robocopy warnings (code 2): Warning
+2025-12-26 16:47:19,752 - DEBUG - [BackupBuilder] - _copy_drive - Fine copia drive D: in G:\BackupPC\.tmp_backup_2025-12-26_16-47-19\Disco_D_Backup_2025-12-26_16-47-19
+2025-12-26 16:47:19,755 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-26 16:47:19,755 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-26 16:47:19,756 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['D:'], 'user_folders': ['Documents', 'Pictures'], 'retention_days': 3}
+2025-12-26 16:47:19,756 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-26 16:47:19,757 - DEBUG - [BackupBuilder] - _copy_drive - Inizio copia drive D: in G:\BackupPC\.tmp_backup_2025-12-26_16-47-19\Disco_D_Backup_2025-12-26_16-47-19
+2025-12-26 16:47:19,760 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-26 16:47:19,760 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-26 16:47:19,761 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['D:', 'E:'], 'user_folders': ['Documents'], 'retention_days': 3}
+2025-12-26 16:47:19,761 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-26 16:47:19,764 - DEBUG - [BackupBuilder] - execute_backup - Inizio execute_backup
+2025-12-26 16:47:19,764 - DEBUG - [BackupBuilder] - _create_temp_backup_folder - Creazione cartella temporanea: G:\BackupPC\.tmp_backup_2024-01-01_10-00-00
+2025-12-26 16:47:19,765 - DEBUG - [BackupBuilder] - execute_backup - Copia drive: D:
+2025-12-26 16:47:19,765 - DEBUG - [BackupBuilder] - _create_folder_drive - Creazione cartella per drive: G:\BackupPC\.tmp_backup_2024-01-01_10-00-00\Disco_D_Backup_2024-01-01_10-00-00
+2025-12-26 16:47:19,765 - DEBUG - [BackupBuilder] - _copy_drive - Inizio copia drive D: in G:\BackupPC\.tmp_backup_2024-01-01_10-00-00\Disco_D_Backup_2024-01-01_10-00-00
+2025-12-26 16:47:19,766 - DEBUG - [BackupBuilder] - _copy_drive - Fine copia drive D: in G:\BackupPC\.tmp_backup_2024-01-01_10-00-00\Disco_D_Backup_2024-01-01_10-00-00
+2025-12-26 16:47:19,766 - DEBUG - [BackupBuilder] - execute_backup - Copia drive: E:
+2025-12-26 16:47:19,766 - DEBUG - [BackupBuilder] - _create_folder_drive - Creazione cartella per drive: G:\BackupPC\.tmp_backup_2024-01-01_10-00-00\Disco_E_Backup_2024-01-01_10-00-00
+2025-12-26 16:47:19,767 - DEBUG - [BackupBuilder] - _copy_drive - Inizio copia drive E: in G:\BackupPC\.tmp_backup_2024-01-01_10-00-00\Disco_E_Backup_2024-01-01_10-00-00
+2025-12-26 16:47:19,767 - DEBUG - [BackupBuilder] - _copy_drive - Fine copia drive E: in G:\BackupPC\.tmp_backup_2024-01-01_10-00-00\Disco_E_Backup_2024-01-01_10-00-00
+2025-12-26 16:47:19,769 - DEBUG - [BackupBuilder] - _finalize_backup - Rinomina cartella temporanea in definitiva: G:\BackupPC\2024-01-01_10-00-00
+2025-12-26 16:47:19,770 - INFO - [BackupBuilder] - Backup eseguito con successo.
+2025-12-26 16:47:19,770 - DEBUG - [BackupBuilder] - execute_backup - Fine execute_backup
+2025-12-26 16:47:19,773 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-26 16:47:19,774 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-26 16:47:19,774 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['D:'], 'user_folders': [], 'retention_days': 3}
+2025-12-26 16:51:08,194 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-26 16:51:08,195 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-26 16:51:08,195 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:'], 'user_folders': ['Documents', 'Pictures'], 'retention_days': 3}
+2025-12-26 16:51:08,196 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-26 16:53:50,840 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-26 16:53:50,841 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-26 16:53:50,842 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:'], 'user_folders': ['Documents', 'Pictures'], 'retention_days': 3}
+2025-12-26 16:53:50,842 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-26 16:53:50,843 - DEBUG - [BackupBuilder] - _create_temp_backup_folder - Creazione cartella temporanea: G:\BackupPC\.tmp_backup_2025-12-26_16-53-50
+2025-12-26 16:53:50,847 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-26 16:53:50,847 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-26 16:53:50,848 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:'], 'user_folders': ['Documents', 'Pictures'], 'retention_days': 3}
+2025-12-26 16:53:50,849 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-26 16:53:50,850 - DEBUG - [BackupBuilder] - _create_folder_drive - Creazione cartella per drive: G:\BackupPC\.tmp_backup_2025-12-26_16-53-50\Disco_D_Backup_2025-12-26_16-53-50
+2025-12-26 16:53:50,854 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-26 16:53:50,854 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-26 16:53:50,855 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['D:'], 'user_folders': ['Documents', 'Pictures'], 'retention_days': 3}
+2025-12-26 16:53:50,855 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-26 16:53:50,857 - DEBUG - [BackupBuilder] - _finalize_backup - Rinomina cartella temporanea in definitiva: G:\BackupPC\2025-12-26_16-53-50
+2025-12-26 16:53:50,962 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-26 16:53:50,963 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-26 16:53:50,963 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['D:'], 'user_folders': ['Documents', 'Pictures'], 'retention_days': 3}
+2025-12-26 16:53:50,964 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-26 16:53:50,965 - DEBUG - [BackupBuilder] - _copy_drive - Inizio copia drive D: in G:\BackupPC\.tmp_backup_2025-12-26_16-53-50\Disco_D_Backup_2025-12-26_16-53-50
+2025-12-26 16:53:50,965 - WARNING - Robocopy warnings (code 2): Warning
+2025-12-26 16:53:50,966 - DEBUG - [BackupBuilder] - _copy_drive - Fine copia drive D: in G:\BackupPC\.tmp_backup_2025-12-26_16-53-50\Disco_D_Backup_2025-12-26_16-53-50
+2025-12-26 16:53:50,968 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-26 16:53:50,969 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-26 16:53:50,969 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['D:'], 'user_folders': ['Documents', 'Pictures'], 'retention_days': 3}
+2025-12-26 16:53:50,969 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-26 16:53:50,971 - DEBUG - [BackupBuilder] - _copy_drive - Inizio copia drive D: in G:\BackupPC\.tmp_backup_2025-12-26_16-53-50\Disco_D_Backup_2025-12-26_16-53-50
+2025-12-26 16:53:50,973 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-26 16:53:50,974 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-26 16:53:50,974 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['D:', 'E:'], 'user_folders': ['Documents'], 'retention_days': 3}
+2025-12-26 16:53:50,975 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-26 16:53:50,977 - DEBUG - [BackupBuilder] - execute_backup - Inizio execute_backup
+2025-12-26 16:53:50,977 - DEBUG - [BackupBuilder] - _create_temp_backup_folder - Creazione cartella temporanea: G:\BackupPC\.tmp_backup_2024-01-01_10-00-00
+2025-12-26 16:53:50,978 - DEBUG - [BackupBuilder] - execute_backup - Copia drive: D:
+2025-12-26 16:53:50,979 - DEBUG - [BackupBuilder] - _create_folder_drive - Creazione cartella per drive: G:\BackupPC\.tmp_backup_2024-01-01_10-00-00\Disco_D_Backup_2024-01-01_10-00-00
+2025-12-26 16:53:50,980 - DEBUG - [BackupBuilder] - _copy_drive - Inizio copia drive D: in G:\BackupPC\.tmp_backup_2024-01-01_10-00-00\Disco_D_Backup_2024-01-01_10-00-00
+2025-12-26 16:53:50,980 - DEBUG - [BackupBuilder] - _copy_drive - Fine copia drive D: in G:\BackupPC\.tmp_backup_2024-01-01_10-00-00\Disco_D_Backup_2024-01-01_10-00-00
+2025-12-26 16:53:50,981 - DEBUG - [BackupBuilder] - execute_backup - Copia drive: E:
+2025-12-26 16:53:50,981 - DEBUG - [BackupBuilder] - _create_folder_drive - Creazione cartella per drive: G:\BackupPC\.tmp_backup_2024-01-01_10-00-00\Disco_E_Backup_2024-01-01_10-00-00
+2025-12-26 16:53:50,981 - DEBUG - [BackupBuilder] - _copy_drive - Inizio copia drive E: in G:\BackupPC\.tmp_backup_2024-01-01_10-00-00\Disco_E_Backup_2024-01-01_10-00-00
+2025-12-26 16:53:50,982 - DEBUG - [BackupBuilder] - _copy_drive - Fine copia drive E: in G:\BackupPC\.tmp_backup_2024-01-01_10-00-00\Disco_E_Backup_2024-01-01_10-00-00
+2025-12-26 16:53:50,982 - DEBUG - [BackupBuilder] - _finalize_backup - Rinomina cartella temporanea in definitiva: G:\BackupPC\2024-01-01_10-00-00
+2025-12-26 16:53:50,983 - INFO - [BackupBuilder] - Backup eseguito con successo.
+2025-12-26 16:53:50,983 - DEBUG - [BackupBuilder] - execute_backup - Fine execute_backup
+2025-12-26 16:53:50,985 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-26 16:53:50,986 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-26 16:53:50,986 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['D:'], 'user_folders': ['Documents'], 'retention_days': 3}
+2025-12-26 16:53:50,987 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-26 16:53:50,989 - DEBUG - [BackupBuilder] - execute_backup - Inizio execute_backup
+2025-12-26 16:53:50,989 - DEBUG - [BackupBuilder] - _create_temp_backup_folder - Creazione cartella temporanea: G:\BackupPC\.tmp_backup_2024-01-01_10-00-00
+2025-12-26 16:53:50,990 - DEBUG - [BackupBuilder] - execute_backup - Copia drive: D:
+2025-12-26 16:53:50,991 - DEBUG - [BackupBuilder] - _create_folder_drive - Creazione cartella per drive: G:\BackupPC\.tmp_backup_2024-01-01_10-00-00\Disco_D_Backup_2024-01-01_10-00-00
+2025-12-26 16:53:50,991 - DEBUG - [BackupBuilder] - _copy_drive - Inizio copia drive D: in G:\BackupPC\.tmp_backup_2024-01-01_10-00-00\Disco_D_Backup_2024-01-01_10-00-00
+2025-12-26 16:53:50,991 - ERROR - [BackupBuilder] - Errore durante la copia del drive D:: Robocopy failed with code 8: Accesso negato
+2025-12-26 16:55:28,307 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-26 16:55:28,308 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-26 16:55:28,308 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:'], 'user_folders': ['Documents', 'Pictures'], 'retention_days': 3}
+2025-12-26 16:55:28,309 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-26 16:55:28,310 - DEBUG - [BackupBuilder] - _create_temp_backup_folder - Creazione cartella temporanea: G:\BackupPC\.tmp_backup_2025-12-26_16-55-28
+2025-12-26 16:55:28,313 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-26 16:55:28,314 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-26 16:55:28,314 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:'], 'user_folders': ['Documents', 'Pictures'], 'retention_days': 3}
+2025-12-26 16:55:28,314 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-26 16:55:28,316 - DEBUG - [BackupBuilder] - _create_folder_drive - Creazione cartella per drive: G:\BackupPC\.tmp_backup_2025-12-26_16-55-28\Disco_D_Backup_2025-12-26_16-55-28
+2025-12-26 16:55:28,318 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-26 16:55:28,319 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-26 16:55:28,319 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['D:'], 'user_folders': ['Documents', 'Pictures'], 'retention_days': 3}
+2025-12-26 16:55:28,320 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-26 16:55:28,321 - DEBUG - [BackupBuilder] - _finalize_backup - Rinomina cartella temporanea in definitiva: G:\BackupPC\2025-12-26_16-55-28
+2025-12-26 16:55:28,324 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-26 16:55:28,325 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-26 16:55:28,325 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['D:'], 'user_folders': ['Documents', 'Pictures'], 'retention_days': 3}
+2025-12-26 16:55:28,326 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-26 16:55:28,327 - DEBUG - [BackupBuilder] - _copy_drive - Inizio copia drive D: in ...2025-12-26_16-55-28...
+2025-12-26 16:55:28,328 - DEBUG - [BackupBuilder] - _copy_drive - Fine copia drive D: in ...2025-12-26_16-55-28...
+2025-12-26 16:55:28,331 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-26 16:55:28,331 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-26 16:55:28,332 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['D:'], 'user_folders': ['Documents', 'Pictures'], 'retention_days': 3}
+2025-12-26 16:55:28,332 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-26 16:55:28,333 - DEBUG - [BackupBuilder] - _copy_drive - Inizio copia drive D: in G:\BackupPC\.tmp_backup_2025-12-26_16-55-28\Disco_D_Backup_2025-12-26_16-55-28
+2025-12-26 16:55:28,334 - WARNING - Robocopy warnings (code 2): Warning
+2025-12-26 16:55:28,334 - DEBUG - [BackupBuilder] - _copy_drive - Fine copia drive D: in G:\BackupPC\.tmp_backup_2025-12-26_16-55-28\Disco_D_Backup_2025-12-26_16-55-28
+2025-12-26 16:55:28,338 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-26 16:55:28,338 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-26 16:55:28,339 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['D:'], 'user_folders': ['Documents', 'Pictures'], 'retention_days': 3}
+2025-12-26 16:55:28,339 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-26 16:55:28,340 - DEBUG - [BackupBuilder] - _copy_drive - Inizio copia drive D: in G:\BackupPC\.tmp_backup_2025-12-26_16-55-28\Disco_D_Backup_2025-12-26_16-55-28
+2025-12-26 16:55:28,343 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-26 16:55:28,344 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-26 16:55:28,344 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['D:', 'E:'], 'user_folders': ['Documents'], 'retention_days': 3}
+2025-12-26 16:55:28,344 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-26 16:55:28,346 - DEBUG - [BackupBuilder] - execute_backup - Inizio execute_backup
+2025-12-26 16:55:28,346 - DEBUG - [BackupBuilder] - _create_temp_backup_folder - Creazione cartella temporanea: G:\BackupPC\.tmp_backup_2024-01-01_10-00-00
+2025-12-26 16:55:28,347 - DEBUG - [BackupBuilder] - execute_backup - Copia drive: D:
+2025-12-26 16:55:28,347 - DEBUG - [BackupBuilder] - _create_folder_drive - Creazione cartella per drive: G:\BackupPC\.tmp_backup_2024-01-01_10-00-00\Disco_D_Backup_2024-01-01_10-00-00
+2025-12-26 16:55:28,348 - DEBUG - [BackupBuilder] - _copy_drive - Inizio copia drive D: in G:\BackupPC\.tmp_backup_2024-01-01_10-00-00\Disco_D_Backup_2024-01-01_10-00-00
+2025-12-26 16:55:28,348 - DEBUG - [BackupBuilder] - _copy_drive - Fine copia drive D: in G:\BackupPC\.tmp_backup_2024-01-01_10-00-00\Disco_D_Backup_2024-01-01_10-00-00
+2025-12-26 16:55:28,348 - DEBUG - [BackupBuilder] - execute_backup - Copia drive: E:
+2025-12-26 16:55:28,349 - DEBUG - [BackupBuilder] - _create_folder_drive - Creazione cartella per drive: G:\BackupPC\.tmp_backup_2024-01-01_10-00-00\Disco_E_Backup_2024-01-01_10-00-00
+2025-12-26 16:55:28,349 - DEBUG - [BackupBuilder] - _copy_drive - Inizio copia drive E: in G:\BackupPC\.tmp_backup_2024-01-01_10-00-00\Disco_E_Backup_2024-01-01_10-00-00
+2025-12-26 16:55:28,349 - DEBUG - [BackupBuilder] - _copy_drive - Fine copia drive E: in G:\BackupPC\.tmp_backup_2024-01-01_10-00-00\Disco_E_Backup_2024-01-01_10-00-00
+2025-12-26 16:55:28,350 - DEBUG - [BackupBuilder] - _finalize_backup - Rinomina cartella temporanea in definitiva: G:\BackupPC\2024-01-01_10-00-00
+2025-12-26 16:55:28,351 - INFO - [BackupBuilder] - Backup eseguito con successo.
+2025-12-26 16:55:28,351 - DEBUG - [BackupBuilder] - execute_backup - Fine execute_backup
+2025-12-26 16:55:28,353 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2025-12-26 16:55:28,354 - DEBUG - [BackupConfig] - validate - Inizio validate
+2025-12-26 16:55:28,355 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['D:'], 'user_folders': ['Documents'], 'retention_days': 3}
+2025-12-26 16:55:28,355 - DEBUG - [BackupConfig] - validate - Fine validate
+2025-12-26 16:55:28,357 - DEBUG - [BackupBuilder] - execute_backup - Inizio execute_backup
+2025-12-26 16:55:28,358 - DEBUG - [BackupBuilder] - _create_temp_backup_folder - Creazione cartella temporanea: G:\BackupPC\.tmp_backup_2024-01-01_10-00-00
+2025-12-26 16:55:28,358 - DEBUG - [BackupBuilder] - execute_backup - Copia drive: D:
+2025-12-26 16:55:28,359 - DEBUG - [BackupBuilder] - _create_folder_drive - Creazione cartella per drive: G:\BackupPC\.tmp_backup_2024-01-01_10-00-00\Disco_D_Backup_2024-01-01_10-00-00
+2025-12-26 16:55:28,359 - DEBUG - [BackupBuilder] - _copy_drive - Inizio copia drive D: in G:\BackupPC\.tmp_backup_2024-01-01_10-00-00\Disco_D_Backup_2024-01-01_10-00-00
+2025-12-26 16:55:28,360 - ERROR - [BackupBuilder] - Errore durante la copia del drive D:: Robocopy failed with code 8: Accesso negato
