@@ -16,7 +16,7 @@ def test_drive_connected(monkeypatch):
         backup_root="BackupPC",
         source_drives=["C:", "D:"],
         user_folders=["Documents"],
-        retention_days=3
+        keep_last_n=3
     )
     
     validator = BackupValidator(config)
@@ -39,7 +39,7 @@ def test_drive_not_connected(monkeypatch):
         backup_root="BackupPC",
         source_drives=["C:", "D:"],
         user_folders=["Documents"],
-        retention_days=3
+        keep_last_n=3
     )
     
     validator = BackupValidator(config)
@@ -63,7 +63,7 @@ def test_drive_connected_real():
         backup_root="BackupPC",
         source_drives=["C:", "D:"],
         user_folders=["Documents"],
-        retention_days=3
+        keep_last_n=3
     )
     
     validator = BackupValidator(config)
@@ -79,7 +79,7 @@ def test_validate_sources_exist(tmp_path):
         backup_root="BackupPC",
         source_drives=["C:", "D:"],
         user_folders=["Documents"],
-        retention_days=3
+        keep_last_n=3
     )
     
     validator = BackupValidator(config)
@@ -107,7 +107,7 @@ def test_validate_sources_not_exist(monkeypatch):
         backup_root="BackupPC",
         source_drives=["C:", "D:"],
         user_folders=["Documents"],
-        retention_days=3
+        keep_last_n=3
     )
     
     validator = BackupValidator(config)
@@ -129,7 +129,7 @@ def test_validate_user_folders_exist():
         backup_root="BackupPC",
         source_drives=["C:", "D:"],
         user_folders=["Documents", "Downloads"],
-        retention_days=3
+        keep_last_n=3
     )
     validator = BackupValidator(config) 
     
@@ -143,7 +143,7 @@ def test_validate_user_folders_not_exist(monkeypatch):
         backup_root="BackupPC",
         source_drives=["C:", "D:"],
         user_folders=["Documents", "Pictures", "NonExistentFolder"],
-        retention_days=3
+        keep_last_n=3
     )
     
     validator = BackupValidator(config)
@@ -168,7 +168,7 @@ def test_has_sufficient_space_true(monkeypatch):
         backup_root="BackupPC",
         source_drives=["C:", "D:"],
         user_folders=["Documents"],
-        retention_days=3
+        keep_last_n=3
     )
     
     validator = BackupValidator(config)
@@ -215,7 +215,7 @@ def test_has_sufficient_space_false(monkeypatch):
         backup_root="BackupPC",
         source_drives=["C:", "D:"],
         user_folders=["Documents"],
-        retention_days=3
+        keep_last_n=3
     )
     
     validator = BackupValidator(config)
@@ -262,7 +262,7 @@ def test_can_perform_backup_all_valid(monkeypatch):
         backup_root="BackupPC",
         source_drives=["C:", "D:"],
         user_folders=["Documents"],
-        retention_days=3
+        keep_last_n=3
     )
     
     validator = BackupValidator(config)
@@ -288,7 +288,7 @@ def test_can_perform_backup_drive_not_connected(monkeypatch):
         backup_root="BackupPC",
         source_drives=["C:", "D:"],
         user_folders=["Documents"],
-        retention_days=3
+        keep_last_n=3
     )
     
     validator = BackupValidator(config)
@@ -305,7 +305,7 @@ def test_can_perform_backup_sources_not_exist(monkeypatch):
         backup_root="BackupPC",
         source_drives=["C:", "D:"],
         user_folders=["Documents"],
-        retention_days=3
+        keep_last_n=3
     )
     
     validator = BackupValidator(config)
@@ -325,7 +325,7 @@ def test_can_perform_backup_user_folders_not_exist(monkeypatch):
         backup_root="BackupPC",
         source_drives=["C:", "D:"],
         user_folders=["Documents"],
-        retention_days=3
+        keep_last_n=3
     )
     
     validator = BackupValidator(config)
@@ -348,7 +348,7 @@ def test_can_perform_backup_insufficient_space(monkeypatch):
         backup_root="BackupPC",
         source_drives=["C:", "D:"],
         user_folders=["Documents"],
-        retention_days=3
+        keep_last_n=3
     )
     
     validator = BackupValidator(config)

@@ -45,7 +45,7 @@ File JSON → impostazioni permanenti
   "backup_root": "Backup_PC",
   "source_drives": ["D:", "E:"],
   "user_folders": ["Downloads", "Desktop", "Documents"],
-  "retention_days": 7,
+  "keep_last_n": 7,
   "min_free_space_gb": 100,
   "verify_backup": true,
   "log_level": "INFO"

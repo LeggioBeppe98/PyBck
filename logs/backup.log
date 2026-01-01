@@ -840,3 +840,15 @@
 2025-12-26 16:55:28,359 - DEBUG - [BackupBuilder] - _create_folder_drive - Creazione cartella per drive: G:\BackupPC\.tmp_backup_2024-01-01_10-00-00\Disco_D_Backup_2024-01-01_10-00-00
 2025-12-26 16:55:28,359 - DEBUG - [BackupBuilder] - _copy_drive - Inizio copia drive D: in G:\BackupPC\.tmp_backup_2024-01-01_10-00-00\Disco_D_Backup_2024-01-01_10-00-00
 2025-12-26 16:55:28,360 - ERROR - [BackupBuilder] - Errore durante la copia del drive D:: Robocopy failed with code 8: Accesso negato
+2026-01-01 21:43:26,217 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2026-01-01 21:43:26,218 - DEBUG - [BackupConfig] - validate - Inizio validate
+2026-01-01 21:43:26,219 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:', 'E:'], 'user_folders': ['Documents', 'Pictures', 'Download'], 'retention_days': 3}
+2026-01-01 21:43:26,220 - DEBUG - [BackupConfig] - validate - Fine validate
+2026-01-01 22:00:25,466 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2026-01-01 22:00:25,466 - DEBUG - [BackupConfig] - validate - Inizio validate
+2026-01-01 22:00:25,467 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:', 'E:'], 'user_folders': ['Documents', 'Pictures', 'Download'], 'retention_days': 3}
+2026-01-01 22:00:25,467 - DEBUG - [BackupConfig] - validate - Fine validate
+2026-01-01 22:02:00,898 - DEBUG - [BackupConfig] - __post_init__ - Verifica cartelle utente
+2026-01-01 22:02:00,898 - DEBUG - [BackupConfig] - validate - Inizio validate
+2026-01-01 22:02:00,899 - DEBUG - [BackupConfig] - validate - Oggetto cofiguraizone: {'backup_drive': 'G:', 'backup_root': 'BackupPC', 'source_drives': ['C:', 'D:', 'E:'], 'user_folders': ['Documents', 'Pictures', 'Download'], 'retention_days': 3}
+2026-01-01 22:02:00,900 - DEBUG - [BackupConfig] - validate - Fine validate

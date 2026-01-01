@@ -11,7 +11,7 @@ class BackupConfig:
     backup_root: str # Cartella radice del backup
     source_drives: list # Elenco delle unità sorgente da includere nel backup
     user_folders: list # Elenco delle cartelle utente da includere nel backup
-    retention_days: int # Numero di giorni per mantenere i backup            
+    keep_last_n: int # Numero di giorni per mantenere i backup            
 
     def __post_init__(self):
         logger.debug(LOG_CLASSE + "__post_init__ - Verifica cartelle utente")
@@ -45,8 +45,8 @@ class BackupConfig:
         if not self.user_folders:
             raise ValueError("Almeno una cartella utente deve essere specificata.")
         
-        if self.retention_days <= 1 or self.retention_days > 6:
-            raise ValueError("Retention days Deve essere maggiore di 1 e minore di 7.")
+        if self.keep_last_n > 0 and self.keep_last_n < 7:
+            raise ValueError("Keep last n Deve essere maggiore di 0 e minore di 7.")
         logger.debug(LOG_CLASSE + "validate - Fine validate")   
     
     def save(self, filepath="config.json"):

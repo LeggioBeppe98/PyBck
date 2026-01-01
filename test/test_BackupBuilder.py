@@ -20,7 +20,7 @@ def test_create_temp_backup_folder():
         backup_root="BackupPC",
         source_drives=["C:", "D:"],
         user_folders=["Documents", "Pictures"],  # Required
-        retention_days=3
+        keep_last_n=3
     )
     
     backup_builder = BackupBuilder(config)
@@ -39,7 +39,7 @@ def test_create_folder_drive():
         backup_root="BackupPC",
         source_drives=["C:", "D:"],
         user_folders=["Documents", "Pictures"],
-        retention_days=3
+        keep_last_n=3
     )
     
     # Crea un'istanza di BackupBuilder
@@ -72,7 +72,7 @@ def test_finalize_backup():
         backup_root="BackupPC",
         source_drives=["D:"],
         user_folders=["Documents", "Pictures"],
-        retention_days=3
+        keep_last_n=3
     )
     
     # Crea un'istanza di BackupBuilder
@@ -98,7 +98,7 @@ def test_copy_drive_success():
         backup_root="BackupPC",
         source_drives=["D:"],
         user_folders=["Documents", "Pictures"],
-        retention_days=3
+        keep_last_n=3
     )
     backup_builder = BackupBuilder(config)
     source_drive = "D:"
@@ -129,7 +129,7 @@ def test_copy_drive_warning(caplog):
         backup_root="BackupPC",
         source_drives=["D:"],
         user_folders=["Documents", "Pictures"],
-        retention_days=3
+        keep_last_n=3
     )
 
     # Crea un'istanza di BackupBuilder
@@ -168,7 +168,7 @@ def test_copy_drive_error(caplog):
         backup_root="BackupPC",
         source_drives=["D:"],
         user_folders=["Documents", "Pictures"],
-        retention_days=3
+        keep_last_n=3
     )
 
     # Crea un'istanza di BackupBuilder
@@ -207,7 +207,7 @@ def test_execute_backup_success():
         backup_root="BackupPC",
         source_drives=["D:", "E:"],
         user_folders=["Documents"],
-        retention_days=3
+        keep_last_n=3
     )
     
     # Mock datetime per timestamp fisso
@@ -269,7 +269,7 @@ def test_execute_backup_failure():
         backup_root="BackupPC",
         source_drives=["D:"],
         user_folders=["Documents"],
-        retention_days=3
+        keep_last_n=3
     )
     
     fixed_time = datetime(2024, 1, 1, 10, 0, 0)

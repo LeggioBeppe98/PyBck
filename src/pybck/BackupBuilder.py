@@ -10,7 +10,7 @@ G:\Backup_PC\.tmp_backup_2024-01-22_10-30-45\
 └── Disco_E_Backup_2024-01-22_10-30-45\  # Drive E:
 
 # FINALE (dopo rename)
-G:\Backup_PC\
+G:\Backup_PC\2024-01-22_10-30-45\
 ├── Disco_C_Backup_2024-01-22_10-30-45\
 ├── Disco_D_Backup_2024-01-22_10-30-45\
 └── Disco_E_Backup_2024-01-22_10-30-45\
